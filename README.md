@@ -1,16 +1,48 @@
-# sec_exam_adv
+<div align="center">
 
-A new Flutter project.
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Google_Contacts_logo.png" width="220px">
 
-## Getting Started
+# **Platform Converter**
+Simple Contact Dairy made with Flutter in India.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+</div>
+## 🗒 About
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The Platform Converter App is built using Flutter, a popular cross-platform app development
+framework, which allows for seamless integration of both Material Design and Human Interface
+Design elements into a single app. The app is compatible with both Android and iOS platforms,
+making it accessible to a wide range of users. It also includes support for multiple languages and
+localization, making it accessible to users around the world.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## ⚙️ Features
+Main features are as follows:
+Add Contact
+Call,SMS, Update Contact
+## 📲 Screenshots
+
+
+<img align="left" src="https://github.com/user-attachments/assets/1a48f513-d4e4-42f5-9627-26734c1a7d73" width="220px">
+<img align="left" src="https://github.com/user-attachments/assets/682c1c8e-694e-4eb9-b174-c845fae28e20" width="220px">
+<img align="left" src="https://github.com/user-attachments/assets/68495780-237d-4dad-b089-ffeb71130c20" width="220px">
+<img align="left" src="https://github.com/user-attachments/assets/a68737f3-6156-4826-b05a-c66cfc0b687c" width="220px">
+<img align="left" src="https://github.com/user-attachments/assets/6a8c9b53-28d8-4eb4-9f1a-5d48723bc46f" width="220px">
+<img align="left" src="https://github.com/user-attachments/assets/2901e896-6ece-4db4-a9fd-6f5e4fb0036b" width="220px">
+<img src="https://github.com/user-attachments/assets/d1d69c9a-b328-4340-a35c-8d9e733e95db" width="220px">
+
+
+<br><br>
+
+
+<div align="center">
+
+
+https://github.com/user-attachments/assets/b238f71e-276f-4924-8908-3fd7e3e32a43
+
+  
+### Made with ❤️ in India.
+---
+### You can show some respect by starring 🌟 the repository!
+---
+</div>
