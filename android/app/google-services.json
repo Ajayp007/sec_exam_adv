@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "913556527908",
+    "project_id": "exam-dd575",
+    "storage_bucket": "exam-dd575.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913556527908:android:497f747a018bd78fc371b1",
+        "android_client_info": {
+          "package_name": "com.exam.sec_exam_adv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHvAVYKk5DLm1b5_5ALscwOAP619G8Ib8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
