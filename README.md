@@ -2,7 +2,7 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Google_Contacts_logo.png" width="220px">
 
-# **Platform Converter**
+# **Contact Dairy**
 Simple Contact Dairy made with Flutter in India.
 
 ---
