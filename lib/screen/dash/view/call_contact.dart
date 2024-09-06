@@ -16,6 +16,12 @@ class _CallContactState extends State<CallContact> {
   HomeController controller = Get.put(HomeController());
 
   @override
+  void initState() {
+    super.initState();
+    controller.readContact();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Obx(
@@ -25,24 +31,24 @@ class _CallContactState extends State<CallContact> {
             return ListTile(
               onTap: () {
               },
-              leading: controller.contactList[index].image == null
+              leading: controller.contactList.value[index]['image'] == null
                   ? const CircleAvatar()
                   : CircleAvatar(
                       backgroundImage: FileImage(
-                        File("${controller.contactList[index].image}"),
+                        File("${controller.contactList[index]['image']}"),
                       ),
                     ),
               contentPadding: const EdgeInsets.symmetric(horizontal: 20),
               title: Text(
-                "${controller.contactList[index].name}",
+                "${controller.contactList[index]['name']}",
               ),
               subtitle: Text(
-                " ${controller.contactList[index].mobile}",
+                " ${controller.contactList[index]['mobile']}",
               ),
               trailing: IconButton(
                 onPressed: () async {
                   String call =
-                      "tel:+91${controller.contactList[index].mobile}";
+                      "tel:+91${controller.contactList[index]['mobile']}";
                   await launchUrl(Uri.parse(call));
                 },
                 icon: const Icon(Icons.phone),

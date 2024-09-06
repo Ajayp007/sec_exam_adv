@@ -38,7 +38,7 @@ class _AddContactState extends State<AddContact> {
                     children: [
                       path == null
                           ? CircleAvatar(
-                              backgroundColor: Colors.grey.shade400,
+                              backgroundColor: Colors.blue,
                               maxRadius: 60,
                               child: InkWell(
                                 onTap: () async {
@@ -132,8 +132,13 @@ class _AddContactState extends State<AddContact> {
                           controller.selectedData(d1!);
                         },
                         label: Text(
-                            "${controller.changeDate.value.day}/${controller.changeDate.value.month}/${controller.changeDate.value.year}"),
-                        icon: const Icon(Icons.calendar_month),
+                          "${controller.changeDate.value.day}/${controller.changeDate.value.month}/${controller.changeDate.value.year}",
+                          style: const TextStyle(color: Colors.blue),
+                        ),
+                        icon: const Icon(
+                          Icons.calendar_month,
+                          color: Colors.blue,
+                        ),
                       ),
                       TextButton.icon(
                         onPressed: () async {
@@ -143,8 +148,13 @@ class _AddContactState extends State<AddContact> {
                           controller.selectedTime(t1!);
                         },
                         label: Text(
-                            "${controller.changeTime.value.hour}:${controller.changeTime.value.minute}"),
-                        icon: const Icon(Icons.watch_later_outlined),
+                          "${controller.changeTime.value.hour}:${controller.changeTime.value.minute}",
+                          style: const TextStyle(color: Colors.blue),
+                        ),
+                        icon: const Icon(
+                          Icons.watch_later_outlined,
+                          color: Colors.blue,
+                        ),
                       ),
                     ],
                   ),
@@ -161,18 +171,9 @@ class _AddContactState extends State<AddContact> {
                   ),
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
-                      if (path != null) {
-                        HomeModel m1 = HomeModel(
-                          name: txtName.text,
-                          image: path,
-                          chat: txtMsg.text,
-                          mobile: txtMobile.text,
-                          date: controller.changeDate.value,
-                          time: controller.changeTime.value,
-                        );
-                        controller.addContact(m1);
-                        DbHelper.helper.insertContactDB(
-                            txtName.text, txtMobile.text, txtMsg.text, path!);
+                      if (controller.contactList != null) {
+                        controller.insertContact(
+                            txtName.text, txtMobile.text, txtMsg.text);
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
                             content: Text("Saved successfully"),

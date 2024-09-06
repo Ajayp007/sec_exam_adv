@@ -17,6 +17,12 @@ class _MsgContactState extends State<MsgContact> {
   HomeController controller = Get.put(HomeController());
 
   @override
+  void initState() {
+    super.initState();
+    controller.readContact();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Obx(
@@ -24,26 +30,25 @@ class _MsgContactState extends State<MsgContact> {
           itemCount: controller.contactList.length,
           itemBuilder: (context, index) {
             return ListTile(
-              onTap: () {
-              },
-              leading: controller.contactList[index].image == null
+              onTap: () {},
+              leading: controller.contactList[index]['image'] == null
                   ? const CircleAvatar()
                   : CircleAvatar(
                       backgroundImage: FileImage(
-                        File("${controller.contactList[index].image}"),
+                        File("${controller.contactList[index]['image']}"),
                       ),
                     ),
               contentPadding: const EdgeInsets.symmetric(horizontal: 20),
               title: Text(
-                "${controller.contactList[index].name}",
+                "${controller.contactList[index]['name']}",
               ),
               subtitle: Text(
-                " ${controller.contactList[index].chat}",
+                " ${controller.contactList[index]['msg']}",
               ),
               trailing: IconButton(
                 onPressed: () async {
                   String call =
-                      "sms:+91${controller.contactList[index].mobile}";
+                      "sms:+91${controller.contactList[index]['mobile']}";
                   await launchUrl(Uri.parse(call));
                 },
                 icon: const Icon(Icons.chat),
